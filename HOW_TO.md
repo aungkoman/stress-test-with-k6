@@ -1,0 +1,1 @@
+ $env:PATH += ";C:\Program Files\k6"; k6 run capacity-test.js
