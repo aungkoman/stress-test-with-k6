@@ -1,0 +1,27 @@
+{
+  "name": "stress-test",
+  "version": "1.0.0",
+  "description": "K6 stress testing project for load testing web applications",
+  "main": "test.js",
+  "scripts": {
+    "test": "k6 run test.js",
+    "test:smoke": "k6 run --vus 1 --duration 30s test.js",
+    "test:load": "k6 run --vus 100 --duration 5m test.js",
+    "test:stress": "k6 run --vus 500 --duration 10m test.js",
+    "test:spike": "k6 run --vus 1000 --duration 2m test.js"
+  },
+  "keywords": [
+    "k6",
+    "load-testing",
+    "stress-testing",
+    "performance"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "k6": "^0.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
